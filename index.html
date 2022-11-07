@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+323-TP03_JS_Ajax_Meteo.html : lecture par ajax d'un Web Service Météo
+                            https://www.prevision-meteo.ch/
+Didier Bonneau DWWM Afpa Créteil
+-->
+<html>
+  <head>
+    <title>TP3 JS Ajax Meteo</title>
+    <link type="text/css" rel="stylesheet" href="323-TP03_JS_Ajax_Meteo.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>TP3 Ajax Affichage de la Météo d'une ville</h1>
+    <h3>TP3 JS Ajax Meteo : Requête asynchrone avec reponse JSON</h3>
+    <h4>
+      Interrogation du web service
+      https://www.prevision-meteo.ch/services/json/creteil
+    </h4>
+    <div id="contenu">
+      <h2>Météo de la ville de Créteil</h2>
+      <br />
+      <button>Envoyer la requête</button>
+      <br /><br />
+      <table>
+        <thead>
+          <tr>
+            <th>Heure</th>
+            <th>Température</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="result"></tbody>
+        <tfoot id="chargeur" style="display: none">
+          <tr>
+            <td colspan="3"><img src="ajax-loader.gif" alt="loadeur" /></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <script src="./tp3.js"></script>
+  </body>
+</html>
