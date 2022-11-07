@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--
+TP 124-TP01_Form_Css
+Création d'un formulaire
+Didier Bonneau DWWM Afpa Créteil maj 31-07-2020
+-->
+<html lang="fr">
+  <head>
+    <title>TP2 AJAX</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Renseignements vous concernant</h1>
+    <h2>(les champs précédés d'une * sont obligatoires)</h2>
+    <br />
+    <form id="renseigne" name="renseigne" method="get" action="#">
+      <fieldset>
+        <legend>
+          <strong><em>Votre identité</em></strong>
+        </legend>
+        <p>
+          <label class="requi" for="nom">Votre nom : </label>
+          <input
+            name="nom"
+            type="text"
+            id="nom"
+            tabindex="1"
+            size="25"
+            maxlength="50"
+            required
+          />
+
+          <label for="photo"
+            >&nbsp;&nbsp;&nbsp;&nbsp;Votre photo d'identité :
+          </label>
+          <input type="file" name="photoIdent" id="photo" />
+        </p>
+        <p>
+          <label class="requi" for="prenom">Votre prénom : </label>
+          <input
+            name="prenom"
+            type="text"
+            id="prenom"
+            tabindex="2"
+            size="25"
+            maxlength="50"
+            required
+          />
+        </p>
+        <p>
+          <label for="adresse">Votre adresse : </label>
+          <textarea
+            name="adresse"
+            id="adresse"
+            cols="45"
+            rows="3"
+            tabindex="3"
+          ></textarea>
+        </p>
+        <p>
+          <label for="code_post">Votre code postal : </label>
+          <input
+            type="text"
+            name="codePost"
+            id="code_post"
+            tabindex="4"
+            pattern="^\d{5}$"
+          />
+          <label for="ville">&nbsp;&nbsp;&nbsp;&nbsp; Votre ville : </label>
+          <select name="ville" id="ville">
+            <option>Choix Ville</option>
+          </select>
+        </p>
+        <p>
+          <label class="requi" for="telephone">Votre téléphone : </label>
+          <input
+            type="tel"
+            name="telephone"
+            id="telephone"
+            tabindex="6"
+            required
+          />
+
+          <label class="requi" for="mail"
+            >&nbsp;&nbsp;&nbsp;&nbsp; Votre mail :
+          </label>
+          <input
+            name="mail"
+            type="email"
+            id="mail"
+            tabindex="7"
+            size="50"
+            required
+          />
+        </p>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>
+          <strong><em>Vos connaissances générales</em></strong>
+        </legend>
+        <p>
+          <label>Lisez vous une ou plusieurs revues informatiques ?</label>
+          <input
+            type="radio"
+            name="revueInfo"
+            id="infoOui1"
+            value="infoOui"
+            tabindex="8"
+          /><label for="infoOui1"> oui </label>
+          <input
+            type="radio"
+            name="revueInfo"
+            id="infoNon1"
+            value="infoNon"
+            tabindex="9"
+            checked="checked"
+          /><label for="infoNon1"> non </label>
+          <label for="listeInfo"
+            >&nbsp;&nbsp;&nbsp;&nbsp;Si oui lesquelles ?</label
+          >
+          <textarea
+            name="listeInfo1"
+            id="listeInfo"
+            cols="35"
+            rows="3"
+            tabindex="10"
+          ></textarea>
+        </p>
+        <p>
+          <label>Consultez vous un ou plusieurs sites informatiques ?</label>
+          <input
+            type="radio"
+            name="siteInfo"
+            id="infoOui2"
+            value="infoOui"
+            tabindex="8"
+          /><label for="infoOui2"> oui </label>
+          <input
+            type="radio"
+            name="siteInfo"
+            id="infoNon2"
+            value="infoNon"
+            tabindex="9"
+            checked="checked"
+          /><label for="infoNon2"> non </label>
+          <label for="listeInfo2"
+            >&nbsp;&nbsp;&nbsp;&nbsp;Si oui lesquels ?</label
+          >
+          <textarea
+            name="listeInfo2"
+            id="listeInfo2"
+            cols="35"
+            rows="3"
+            tabindex="10"
+          ></textarea>
+        </p>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>
+          <strong><em>Vos intérêts</em></strong>
+        </legend>
+        <p><label>Vous vous intéressez :</label></p>
+        <p>
+          <input
+            type="checkbox"
+            name="intWeb"
+            value="vrai"
+            id="intWeb"
+            tabindex="12"
+          />
+          <label for="intWeb">à la programmation Web</label>
+        </p>
+        <p>
+          <input
+            type="checkbox"
+            name="intProg"
+            value="vrai"
+            id="intProg"
+            tabindex="13"
+          />
+          <label for="intProg">à la programmation informatique</label>
+        </p>
+        <p>
+          <input
+            type="checkbox"
+            name="intJeux"
+            value="vrai"
+            id="intJeux"
+            tabindex="14"
+          />
+          <label for="intJeux">aux jeux vidéos</label>
+        </p>
+      </fieldset>
+      <br />
+      <input
+        name="soumettre"
+        type="submit"
+        value="Soumettre"
+        title="Soumettre le formulaire"
+      />
+      <input
+        name="reset"
+        type="reset"
+        value="R&eacute;initialiser"
+        title="Réinitialiser le formulaire"
+      />
+    </form>
+    <script src="./tp2.js"></script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+/* 
+124-TP01_Form_Css.css
+Feuille de style du TP 124-TP01_Form_Css.html
+Didier Bonneau DWWM Afpa Créteil maj 31-07-2020
+*/
+html, body, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff;
+    color: #111111;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form#renseigne {
+    background: #adbd74;
+    /*-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;*/
+    border-radius: 5px;
+    padding: 20px;
+    width: 1024px;
+    margin: 0 auto;
+}
+
+form#renseigne legend {
+    color: #384313;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-shadow: 0 10px 10px red;
+}
+
+form#renseigne fieldset:first-of-type label:not([for=photo]){
+    display: inline-block;
+    width: 135px;
+}
+form#renseigne textArea {
+    vertical-align: top;
+    resize: none;
+}
+form#renseigne input:not([type=submit]):not([type=reset]):focus {
+    background:#eaeaea;
+}
+form#renseigne textArea:focus {
+    background:#eaeaea;
+}
+form#renseigne input[type=file] {
+    background: #849257;
+    border: none;
+    /*-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;*/
+    border-radius: 20px;
+    color: #ffffff;
+    /*display: block;*/
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    margin: auto;
+    padding: 7px 25px;
+    text-shadow: 0 1px 1px #000000;
+    text-transform: uppercase;
+}
+
+form#renseigne input[type=file]:hover {
+    background: #1e2506;
+    cursor: pointer;
+}
+
+label[class="requi"]:after {
+    content: " *";
+}
